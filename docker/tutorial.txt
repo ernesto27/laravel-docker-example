@@ -1,0 +1,9 @@
+Situarse en la carpeta docker
+
+cd docker
+
+Ejecutar el siguiente comando para bajarse la imagen y generar el contenedor
+docker-compose up -d
+
+URL App
+http://localhost:8888
