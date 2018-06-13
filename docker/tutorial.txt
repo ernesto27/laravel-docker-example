@@ -1,9 +1,23 @@
 Situarse en la carpeta docker
 
-cd docker
+$ cd docker
 
 Ejecutar el siguiente comando para bajarse la imagen y generar el contenedor
-docker-compose up -d
+$ docker-compose up -d
+
+Ingresar al contenedor en modo interactivo
+$ docker exec -it docker_web_1 /bin/bash
+
+Instalar dependecias via composer
+$ cd /var/www/html/agro-api/
+$ composer install
+
+Crear archivo de entorno
+$ cp .env.example .env
+
+Crear key secret app 
+$ php artisan key:generate
+
 
 URL App
 http://localhost:8888
