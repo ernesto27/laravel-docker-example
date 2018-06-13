@@ -17,6 +17,8 @@ RUN composer global require "laravel/installer"
 
 COPY 000-default.conf /etc/apache2/sites-available/000-default.conf
 
+RUN a2enmod rewrite
+
 EXPOSE 80
 
 CMD apachectl -D FOREGROUND
