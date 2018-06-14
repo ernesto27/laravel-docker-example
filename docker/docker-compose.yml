@@ -2,7 +2,18 @@ version: '2'
 services:
   web:
     image: ernesto27/laravel-docker
+    depends_on:
+      - mysql5.7
+    environment:
+      DB_HOST: mysql5.7
     ports:
       - "8888:80"
     volumes:
       - ../:/var/www/html/agro-api
+
+  mysql5.7:
+    image: mysql:5.7
+    environment:
+      - MYSQL_ROOT_PASSWORD=1234
+    ports:
+      - "3399:3306"
